@@ -11,12 +11,6 @@ def init():
     model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'automl_hearth.pkl')
     model = joblib.load(model_path)
 
-#    global name
-#
-#    with open('./source_directory/extradata.json') as json_file:
-#        data = json.load(json_file)
-#        name = data["people"][0]["name"]
-
 input_sample = np.array([[75, 0, 582, 0, 20, 1, 265000, 1.9, 130, 1, 0, 4, 1]])
 output_sample = np.array([0])
 
