@@ -22,7 +22,8 @@ def clean_data(data):
 
     return x_df,y_df
 
-data = pd.read_csv("heart_failure_clinical_records_dataset.csv")
+# data = pd.read_csv("heart_failure_clinical_records_dataset.csv")
+data = "https://raw.githubusercontent.com/Ulizeuz/nd00333-capstone/main/heart_failure_clinical_records_dataset.csv"
 
 ds = Dataset.Tabular.from_delimited_files(data)
 
