@@ -1,0 +1,149 @@
+2020/12/29 00:49:46 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/info
+2020/12/29 00:49:46 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+[2020-12-29T00:49:48.297959] Entering context manager injector.
+[context_manager_injector.py] Command line Options: Namespace(inject=['ProjectPythonPath:context_managers.ProjectPythonPath', 'RunHistory:context_managers.RunHistory', 'TrackUserError:context_managers.TrackUserError'], invocation=['train.py', '--C', '1.5', '--max_iter', '50'])
+Script type = None
+Starting the daemon thread to refresh tokens in background for process with pid = 94
+Entering Run History Context Manager.
+/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/urllib3/util/retry.py:439: DeprecationWarning: Using 'method_whitelist' with Retry is deprecated and will be removed in v2.0. Use 'allowed_methods' instead
+  DeprecationWarning,
+[2020-12-29T00:49:53.670376] Current directory: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-132250/azureml/hd_9bed0763-8e7b-439a-8ca9-1a498732d0be_3/mounts/workspaceblobstore/azureml/HD_9bed0763-8e7b-439a-8ca9-1a498732d0be_3
+[2020-12-29T00:49:53.670506] Preparing to call script [train.py] with arguments:['--C', '1.5', '--max_iter', '50']
+[2020-12-29T00:49:53.670564] After variable expansion, calling script [train.py] with arguments:['--C', '1.5', '--max_iter', '50']
+
+/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/urllib3/util/retry.py:439: DeprecationWarning: Using 'method_whitelist' with Retry is deprecated and will be removed in v2.0. Use 'allowed_methods' instead
+  DeprecationWarning,
+Starting the daemon thread to refresh tokens in background for process with pid = 94
+
+
+[2020-12-29T00:49:54.455312] The experiment failed. Finalizing run...
+/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/urllib3/util/retry.py:439: DeprecationWarning: Using 'method_whitelist' with Retry is deprecated and will be removed in v2.0. Use 'allowed_methods' instead
+  DeprecationWarning,
+Cleaning up all outstanding Run operations, waiting 900.0 seconds
+2 items cleaning up...
+Cleanup took 0.11777853965759277 seconds
+Traceback (most recent call last):
+  File "/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-132250/azureml/hd_9bed0763-8e7b-439a-8ca9-1a498732d0be_3/mounts/workspaceblobstore/azureml/HD_9bed0763-8e7b-439a-8ca9-1a498732d0be_3/azureml-setup/context_manager_injector.py", line 201, in execute_with_context
+    runpy.run_path(sys.argv[0], globals(), run_name="__main__")
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/runpy.py", line 263, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "train.py", line 27, in <module>
+    ds = Dataset.Tabular.from_delimited_files(data)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/_loggerfactory.py", line 129, in wrapper
+    return func(*args, **kwargs)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 313, in from_delimited_files
+    dataflow = dataprep().read_csv(_validate_and_normalize_path(path),
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 937, in _validate_and_normalize_path
+    raise invalid_path_error
+azureml.exceptions._azureml_exception.UserErrorException: UserErrorException:
+	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore."
+    }
+}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 27, in <module>
+    ds = Dataset.Tabular.from_delimited_files(data)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/_loggerfactory.py", line 129, in wrapper
+    return func(*args, **kwargs)
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 313, in from_delimited_files
+    dataflow = dataprep().read_csv(_validate_and_normalize_path(path),
+  File "/azureml-envs/azureml_a1736710baabf05d37337a101fa8d6d1/lib/python3.6/site-packages/azureml/data/dataset_factory.py", line 937, in _validate_and_normalize_path
+    raise invalid_path_error
+UserScriptException: UserScriptException:
+	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.
+	InnerException UserErrorException:
+	Message: Invalid argument type for `path`. It can be single value or a list of: string starting with "http://" or "https://", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore."
+    }
+}
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Invalid argument type for `path`. It can be single value or a list of: string starting with \"http://\" or \"https://\", `azureml.data.datapath.DataPath` object, or tuple of `azureml.core.Datastore` object and string for relative path in the datastore."
+    }
+}
+
+[2020-12-29T00:49:54.736657] Finished context manager injector with Exception.
+2020/12/29 00:49:55 Failed to run the wrapper cmd with err: exit status 1
+2020/12/29 00:49:55 Attempt 1 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+2020/12/29 00:49:55 Sending http request failed with error: Post "http://10.0.0.5:16384/sendlogstoartifacts/status": dial tcp 10.0.0.5:16384: connect: connection refused
+Request: POST /sendlogstoartifacts/status HTTP/1.0
+Host: 10.0.0.5:16384
+Content-Type: application/json
+User-Agent: AmlCompute-Hosttools/linux/3.0.01433.0003-12f61a0
+
+{"process_name":"worker","timestamp":"2020-12-29T00:49:55.52901034Z","status":"Failed"}
+
+2020/12/29 00:49:56 Attempt 2 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+2020/12/29 00:49:56 Sending http request failed with error: Post "http://10.0.0.5:16384/sendlogstoartifacts/status": dial tcp 10.0.0.5:16384: connect: connection refused
+Request: POST /sendlogstoartifacts/status HTTP/1.0
+Host: 10.0.0.5:16384
+Content-Type: application/json
+User-Agent: AmlCompute-Hosttools/linux/3.0.01433.0003-12f61a0
+
+{"process_name":"worker","timestamp":"2020-12-29T00:49:55.52901034Z","status":"Failed"}
+
+2020/12/29 00:49:58 Attempt 3 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+2020/12/29 00:49:58 Sending http request failed with error: Post "http://10.0.0.5:16384/sendlogstoartifacts/status": dial tcp 10.0.0.5:16384: connect: connection refused
+Request: POST /sendlogstoartifacts/status HTTP/1.0
+Host: 10.0.0.5:16384
+Content-Type: application/json
+User-Agent: AmlCompute-Hosttools/linux/3.0.01433.0003-12f61a0
+
+{"process_name":"worker","timestamp":"2020-12-29T00:49:55.52901034Z","status":"Failed"}
+
+2020/12/29 00:50:02 Attempt 4 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+2020/12/29 00:50:02 Sending http request failed with error: Post "http://10.0.0.5:16384/sendlogstoartifacts/status": dial tcp 10.0.0.5:16384: connect: connection refused
+Request: POST /sendlogstoartifacts/status HTTP/1.0
+Host: 10.0.0.5:16384
+Content-Type: application/json
+User-Agent: AmlCompute-Hosttools/linux/3.0.01433.0003-12f61a0
+
+{"process_name":"worker","timestamp":"2020-12-29T00:49:55.52901034Z","status":"Failed"}
+
+2020/12/29 00:50:10 Attempt 5 of http call to http://10.0.0.5:16384/sendlogstoartifacts/status
+2020/12/29 00:50:10 Sending http request failed with error: Post "http://10.0.0.5:16384/sendlogstoartifacts/status": dial tcp 10.0.0.5:16384: connect: connection refused
+Request: POST /sendlogstoartifacts/status HTTP/1.0
+Host: 10.0.0.5:16384
+Content-Type: application/json
+User-Agent: AmlCompute-Hosttools/linux/3.0.01433.0003-12f61a0
+
+{"process_name":"worker","timestamp":"2020-12-29T00:49:55.52901034Z","status":"Failed"}
+
+2020/12/29 00:50:26 Final http request try failed with error: <nil>
+. Request: POST /sendlogstoartifacts/status HTTP/1.0
+Host: 10.0.0.5:16384
+Content-Type: application/json
+User-Agent: AmlCompute-Hosttools/linux/3.0.01433.0003-12f61a0
+
+{"process_name":"worker","timestamp":"2020-12-29T00:49:55.52901034Z","status":"Failed"}
+
+2020/12/29 00:50:26 Request max attempts reached...Exit...
+2020/12/29 00:50:26 Retries exhausted. Http call failed, Url: http://10.0.0.5:16384/sendlogstoartifacts/status
+2020/12/29 00:50:26 Fail to send to master with error: InternalError - :{
+}
+ 
+2020/12/29 00:50:26 mpirun version string: {
+Intel(R) MPI Library for Linux* OS, Version 2018 Update 3 Build 20180411 (id: 18329)
+Copyright 2003-2018 Intel Corporation.
+}
+2020/12/29 00:50:26 MPI publisher: intel ; version: 2018
+2020/12/29 00:50:26 Process Exiting with Code:  1
