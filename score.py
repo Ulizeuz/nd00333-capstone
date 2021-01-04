@@ -1,7 +1,7 @@
 import json
 import numpy as np
 import os
-from sklearn.externals import joblib
+import joblib
 def init():
     global model
     model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'automl_hearth.pkl')
