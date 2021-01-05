@@ -134,6 +134,46 @@ We decided deloy the best model we get with AutoML, it was VotingEnsemble, for t
 
 - And finally create the enviroment for the deployment where Azure Machine Learning can install the necessary packages
 
+### Consume model deployed
+
+Once deploying the model as a web service a REST API endpoint is created. We can send data to this endpoint and receive the prediction returned by the model. This example demonstrates how to use Python to call the web service created:
+
+```
+import requests
+import json
+
+scoring_uri = '<Update web service URI>'
+headers = {'Content-Type':'application/json'}
+
+test_data = json.dumps({'data':[{
+    'age':75,
+    'anaemia':0,
+    'creatinine_phosphokinase':582,
+    'diabetes':0,
+    'ejection_fraction':20,
+    'high_blood_pressure':1,
+    'platelets':265000,
+    'serum_creatinine':1.9,
+    'serum_sodium':130,
+    'sex':1,
+    'smoking':0,
+    'time':4}
+    ]
+        })
+
+response = requests.post(scoring_uri, data=test_data, headers=headers)
+
+print("Result:",response.text)
+
+```
+The result returned is similar to the following:
+
+```
+Result: [0]
+```
+
+Where **[0]** is the negative prediction of Death Event and the positive prediction is **[1]** 
+
 ## Screen Recording
 
 You can find in the next video how to consume this model in a simple example
@@ -146,6 +186,7 @@ There are some improvement that I want to do as a next version
 - Convert the model to ONNX format. 
 - Deploy the model to the Edge using Azure IoT Edge. 
 - Enable logging in the deployed web app.
+- Deploy Swagger server
 
 On the other hand, I'd like to improve the model in the future: firstly, trying changing the primary metric like death probability, becaming a continuous model. Another thing is add more data, the Kaggle dataset is good to practice, but has few data. Finally, I want to improve the hyperdrive experiment using another models, it's a good way to get experience tunning models and in some cases with better results than AutoML
 
