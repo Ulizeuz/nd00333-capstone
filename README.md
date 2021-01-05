@@ -57,7 +57,9 @@ automl_config = AutoMLConfig(
 )
 
 ```
-We can observe task is **Classification**, with **AUC_weighted** as primary metric and the target we want to find is the column **DEATH_EVENT**. The train_data needs to be TabularDataset type. We set featurization as **auto**  to do this step automatically. Finally, we enable **early stopping** to avoid overfitting. 
+We can observe task is **Classification**, with **AUC_weighted** as primary metric and the target we want to find is the column **DEATH_EVENT**. The train_data needs to be TabularDataset type. We set **featurization** as auto to do this step automatically. Finally, we enable **early stopping** to avoid overfitting. 
+
+Another important configuration settings that impact the training process are **experiment_timeout_minutes** and **max_concurrent_iterations**. The first define the maximum amount of time in minutes that all iterations combined can take before the experiment terminates and the second represents the maximun number of iterations that would be executed in parallel.
 
 ### Results
 
@@ -144,3 +146,6 @@ There are some improvement that I want to do as a next version
 - Convert the model to ONNX format. 
 - Deploy the model to the Edge using Azure IoT Edge. 
 - Enable logging in the deployed web app.
+
+On the other hand, I'd like to improve the model in the future: firstly, trying changing the primary metric like death probability, becaming a continuous model. Another thing is add more data, the Kaggle dataset is good to practice, but has few data. Finally, I want to improve the hyperdrive experiment using another models, it's a good way to get experience tunning models and in some cases with better results than AutoML
+
