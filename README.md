@@ -1,6 +1,8 @@
 # Hearth Failure prediction. Azure ML Example
 
-This project is part of the Udacity Azure ML Nanodegree. Here, we use both the Hyperdrive and Automl API from Azureml to build a Classification Model using Kaggle's Heart Failure Prediction and finally deploy the best model as a Webservice.
+This project is part of the Udacity Azure ML Nanodegree. Here, we use both the Hyperdrive and Automl API from Azureml to build a Classification Model using Kaggle's Heart Failure Prediction and finally deploy the best model as a Webservice:
+
+![Diagram](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_04_Diagram.png) 
 
 ## Project Set Up and Installation
 
