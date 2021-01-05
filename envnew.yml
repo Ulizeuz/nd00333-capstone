@@ -1,0 +1,26 @@
+channels:
+- anaconda
+- conda-forge
+dependencies:
+- pip
+- python=3.6.2
+- pip:
+  - azureml-core==1.19.0
+  - azureml-defaults==1.19.0
+  - azureml-telemetry==1.19.0
+  - azureml-train-core==1.19.0
+  - azureml-widgets==1.19.0
+  - azureml-sdk==1.19.0
+  - azureml-train-automl-runtime==1.19.0
+  - azureml-automl-runtime==1.19.0
+  - mlflow
+  - sklearn-pandas
+- pandas
+- numpy
+- tqdm
+- py-xgboost
+- joblib
+- xgboost
+- scikit-learn==0.22.1
+- matplotlib
+name: azureml_a1736710baabf05d37337a101fa8d6d1
