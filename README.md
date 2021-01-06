@@ -170,11 +170,21 @@ As we can see in the param_sampling configuration, we use 2 options with 2 value
 ![Run_details_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_05_HD_Run_05.png)
 ![Run_details_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_05_HD_Run_06.png)
 
-At the end of the run, we get the score of 0.85 for our primary metric, with 0.5 value for --C and --150 for max_iter as you can see in the next Screenshots:
+At the end of the run, the best run has the score of 0.85 for our primary metric, with 0.5 value for Regularization Strengh and --150 for max iterations as you can see in the next Screenshot:
 
 ![Params_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_03_HD2.png)
 
+According with the next graphs we notice when increase max_iter parameter, the primary metric has better results, more than tunning --C:
 
+![Graphs](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_06_HD_Param_01.png)
+![Graphs](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_06_HD_Param_02.png)
+![Graphs](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_06_HD_Param_03.png)
+
+For future work, we tunning this parameter to get more accuracy metric.
+
+Finally we register the model:
+
+![Graphs](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_07_HD_Model_01.png)
 
 ## Model Deployment
 
@@ -240,5 +250,5 @@ There are some improvement that I want to do as a next version
 - Enable logging in the deployed web app.
 - Deploy Swagger server
 
-On the other hand, I'd like to improve the model in the future: firstly, trying changing the primary metric like death probability, becaming a continuous model. Another thing is add more data, the Kaggle dataset is good to practice, but has few data and the model has different weights every time we run probably because depends on which cases are in the train data. Finally, I want to improve the hyperdrive experiment using another models, it's a good way to get experience tunning models and in some cases with better results than AutoML
+On the other hand, I'd like to improve the model in the future: firstly, trying changing the primary metric like death probability, becaming a continuous model. Another thing is add more data, the Kaggle dataset is good to practice, but has few data and the model has different weights every time we run probably because depends on which cases are in the train data. Finally, I want to improve the hyperdrive experiment using another models, or at least increase the max_iter parameter, it's a good way to get experience tunning models and in some cases get better results than AutoML
 
