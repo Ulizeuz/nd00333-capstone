@@ -188,5 +188,5 @@ There are some improvement that I want to do as a next version
 - Enable logging in the deployed web app.
 - Deploy Swagger server
 
-On the other hand, I'd like to improve the model in the future: firstly, trying changing the primary metric like death probability, becaming a continuous model. Another thing is add more data, the Kaggle dataset is good to practice, but has few data. Finally, I want to improve the hyperdrive experiment using another models, it's a good way to get experience tunning models and in some cases with better results than AutoML
+On the other hand, I'd like to improve the model in the future: firstly, trying changing the primary metric like death probability, becaming a continuous model. Another thing is add more data, the Kaggle dataset is good to practice, but has few data and the model has different weights every time we run probably because depends on which cases are in the train data. Finally, I want to improve the hyperdrive experiment using another models, it's a good way to get experience tunning models and in some cases with better results than AutoML
 
