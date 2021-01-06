@@ -161,9 +161,16 @@ Finally, apply Scikit-Learn model to fit the training data and compute the accur
 
 ### Results
 
-At the end of the run, we get the score of 0.85 for our primary metric, with 0.5 value for --C and --150 for max_iter as you can see in the next Screenshots:
+As we can see in the param_sampling configuration, we use 2 options with 2 values; then we can see 4 child runs with RunDetails:
 
-![Run_details_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_03_HD1.png)
+![Run_details_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_05_HD_Run_01.png)
+![Run_details_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_05_HD_Run_02.png)
+![Run_details_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_05_HD_Run_03.png)
+![Run_details_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_05_HD_Run_04.png)
+![Run_details_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_05_HD_Run_05.png)
+![Run_details_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_05_HD_Run_06.png)
+
+At the end of the run, we get the score of 0.85 for our primary metric, with 0.5 value for --C and --150 for max_iter as you can see in the next Screenshots:
 
 ![Params_HD](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_03_HD2.png)
 
