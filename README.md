@@ -82,7 +82,11 @@ And finally, the ScreenShot when the Run is completed:
 ![Run Details9](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML9.png)
 
 
-The best model was VotingEnsemble with 0.9248. The following are the parameters of the best model trained:
+The best model was VotingEnsemble with 0.9248. Here we can see the best model with its run id:
+
+![Best_Model](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_02_AutoML3.png)
+
+And the following are the parameters of the best model trained:
 
 ![Parameters](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_02_AutoML1.png)
 ![Parameters](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_02_AutoML2.png)
