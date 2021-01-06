@@ -63,22 +63,63 @@ Another important configuration settings that impact the training process are **
 
 ### Results
 
-The best model was VotingEnsemble with 0.9252.
+We use RunDetails() to get this Screenshots:
 
 ![Run Details1](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML1.png)
 ![Run Details2](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML2.png)
 ![Run Details3](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML3.png)
+
+We can see above that the Dataset pass the 4 Data Guardrails: Cross Validation, Class Balancing Detection, Missing Feature Value and High Cardinality Feature Detection. The next steps show each iteration with its metric:
+
 ![Run Details4](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML4.png)
 ![Run Details5](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML5.png)
 ![Run Details6](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML6.png)
 ![Run Details7](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML7.png)
 ![Run Details8](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML8.png)
 
-And the following are the parameters of the best model trained:
+And finally, the ScreenShot when the Run is completed:
+
+![Run Details9](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_01_AutoML9.png)
+
+
+The best model was VotingEnsemble with 0.9248. The following are the parameters of the best model trained:
 
 ![Parameters](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_02_AutoML1.png)
 ![Parameters](https://github.com/Ulizeuz/nd00333-capstone/blob/main/ScreenShots/capstone_02_AutoML2.png)
 
+We notice for this run the weights are equal for each feature. This is something to investigate in detail as future work, because in other run we have a totally different weights:
+
+```
+
+Pipeline(memory=None,
+         steps=[('datatransformer',
+                 DataTransformer(enable_dnn=None, enable_feature_sweeping=None,
+                                 feature_sweeping_config=None,
+                                 feature_sweeping_timeout=None,
+                                 featurization_config=None, force_text_dnn=None,
+                                 is_cross_validation=None,
+                                 is_onnx_compatible=None, logger=None,
+                                 observer=None, task=None, working_dir=None)),
+                ('prefittedsoftvotingclassifier',...
+                                                                                               tree_method='auto',
+                                                                                               verbose=-10,
+                                                                                               verbosity=0))],
+                                                                     verbose=False))],
+                                               flatten_transform=None,
+                                               weights=[0.06666666666666667,
+                                                        0.13333333333333333,
+                                                        0.06666666666666667,
+                                                        0.06666666666666667,
+                                                        0.06666666666666667,
+                                                        0.13333333333333333,
+                                                        0.06666666666666667,
+                                                        0.13333333333333333,
+                                                        0.06666666666666667,
+                                                        0.06666666666666667,
+                                                        0.06666666666666667,
+                                                        0.06666666666666667]))],
+         verbose=False)
+```
 
 ## Hyperparameter Tuning
 
